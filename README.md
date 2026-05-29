@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MSFT Mail Simulation</title>
+  <link rel="stylesheet" href="./styles.css?v=FINAL_CLOCK_20_NOTAG" />
+</head>
+<body>
+  <div class="page">
+    <main class="mail-shell">
+      <header class="topbar">
+        <div class="topline">
+          <div class="uos-logo">UoS</div>
+          <div class="app-title">MSFT Mail</div>
+          <div class="search-wrap">
+            <span class="search-icon">⌕</span>
+            <input id="searchInput" placeholder="Search..." />
+          </div>
+          <button id="topNewMail" class="btn btn-primary">＋ New Mail</button>
+          <button class="btn menu-button">☰ Menu</button>
+        </div>
+        <nav class="navline">
+          <span>File</span>
+          <span class="active">Home</span>
+          <span>View</span>
+          <span>Help</span>
+        </nav>
+      </header>
+
+      <section class="mail-grid">
+        <aside class="folders">
+          <button id="sideNewMail" class="btn btn-primary full-width">＋ New Mail</button>
+          <div id="folders" class="folder-box"></div>
+        </aside>
+
+        <aside class="message-list">
+          <div class="list-head">
+            <span id="folderTitle">Inbox</span>
+            <span id="folderTotal" class="tiny">0 total</span>
+          </div>
+          <div id="messageList" class="messages"></div>
+        </aside>
+
+        <section id="readingPane" class="reading-pane"></section>
+      </section>
+    </main>
+  </div>
+
+  <footer class="desktop-bar">
+    <div class="desktop-inner">
+      <div class="desktop-left">
+        <span>🖥️</span>
+        <div class="desktop-search">⌕ Search</div>
+      </div>
+      <div class="desktop-centre">
+        <button class="task-btn">✉ Mail</button>
+        <button class="task-btn secondary">◉ sPRD</button>
+      </div>
+      <div class="desktop-right">
+        <span>⏻</span>
+        <span>⌃</span>
+        <span>▭</span>
+        <span>⌁</span>
+        <span>🖨️</span>
+        <div id="clock" class="clock"></div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="introModal" class="modal-backdrop">
+    <div class="modal">
+      <div class="modal-title-row">
+        <div class="warning-icon">!</div>
+        <div>
+          <h1>Part 2: escalation email</h1>
+          <p class="tiny">Read the instructions carefully before beginning.</p>
+        </div>
+      </div>
+      <p>
+        In Part 1 of this activity, you checked through Luke Pale’s sPRD, added feedback
+        about poor practice you observed, and discovered that he had added a shift to his
+        timesheet which he never actually attended.
+      </p>
+      <p>
+        This is fraud and needs escalating. You will have a chance to speak to Luke about
+        this when you are next on campus, but for now you are going to send an email to his
+        Practice Assessor, named Practice Supervisor, PEF / Link Nurse and Academic Assessor
+        outlining the concerns around poor practice and fraud.
+      </p>
+      <p><strong>Click New Mail to begin.</strong></p>
+      <div class="modal-actions">
+        <button id="introClose" class="btn btn-primary">✉ I understand</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="timeOverlay" class="time-overlay hidden">
+    <div class="big-clock" id="bigClock"></div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="./data.js?v=FINAL_CLOCK_20_NOTAG"></script>
+  <script src="./helpers.js?v=FINAL_CLOCK_20_NOTAG"></script>
+  <script src="./app.js?v=FINAL_CLOCK_20_NOTAG"></script>
+</body>
+</html>

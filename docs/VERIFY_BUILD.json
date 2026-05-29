@@ -1,0 +1,15 @@
+{
+  "build": "FINAL_CLOCK_20_BUILD",
+  "required_checks": {
+    "continuity_becca_email": true,
+    "continuity_chris_email": true,
+    "all_static_dates_yesterday": true,
+    "all_static_times_yesterday": true,
+    "index_cache_busted": true,
+    "clock_overlay_html": true,
+    "clock_overlay_css": true,
+    "send_uses_clock_20": true,
+    "old_20_second_wait_removed": true,
+    "opens_on_becca_continuity": true
+  }
+}
